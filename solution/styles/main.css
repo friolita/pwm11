@@ -1,0 +1,47 @@
+/* main.css */
+
+.container {
+  background: #eee;
+  overflow: auto;
+}
+
+.container .col {
+    width: 27%;
+    padding: 30px 3.15% 0;
+    float: left;
+}
+/* TODO 3 - style the page */
+
+@media	screen	and	(max-width:	48rem)/* 48rem = 768px */	{
+		.container	.col	{
+				width:	95%;
+		}
+/* media query dengan aturan jika lebar viewport kurang dari 48rem 
+atau 768px maka lebar kolom dari class .container .col menjadi 95% 
+ "media tersebut memberikan efek ketika ukuran maks 768 maka akan menampilkan teks horizontal 
+ dan jika ukuran diatas 768px maka akan vertikal" */
+
+ 
+ 
+ /* Konfigurasi/ styling dengan menggunakan flexbox*/
+ .container	{
+		display:	-webkit-box;		/*	OLD	-	iOS	6-,	Safari	3.1-6	*/
+		display:	-ms-flexbox;		/*	TWEENER	-	IE	10	*/
+		display:	flex;									/*	NEW,	Spec	-	Firefox,	Chrome,	Opera	*/
+		background:	#eee;		
+		overflow:	auto;
+}
+
+.container	.col	{
+		flex:	1;
+		padding:	1rem;
+}
+
+@media	screen	and	(max-width:	48rem)	{
+		.container	{
+				display:	-webkit-box;
+				display:	-ms-flexbox;
+				display:	flex;
+				flex-flow:	column;
+		}
+}
